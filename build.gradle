@@ -1,0 +1,22 @@
+plugins {
+    id 'idea'
+    id 'java-library'
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation platform("io.micronaut:micronaut-bom:1.2.0")
+
+    implementation 'io.micronaut:micronaut-runtime:1.2.0'
+
+    implementation 'io.micronaut:micronaut-inject-java:1.2.0'
+    annotationProcessor 'io.micronaut:micronaut-inject-java:1.2.0'
+
+    testImplementation 'junit:junit:4.12'
+}
